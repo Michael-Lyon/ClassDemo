@@ -1,14 +1,16 @@
-lst = [1, 30, 3, 40, 10, 10, 25, 50]
+beans = 300
+rice = 500
+beef = 750
+egg = 200
+chioma_money = 1_500
 
-def large(param: list):
-    """This function takes in a list and returns the largest number in it."""
-    largest = 0
-    for x in param:
-        if x > largest:
-            largest = x
-    return largest
+food = input("What do you want: ")
+if food.lower() == "beans":
+    print(f"It costs {beans}NGN")
+    ask = input("Buying? ")
+    if ask.lower() == "yes":
+        chioma_money = chioma_money - beans
+        print(f"ping ping!! you have {chioma_money} left in your account.")
 
-
-print(large(lst))
 
 
