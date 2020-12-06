@@ -1,8 +1,10 @@
-fhandle = open("mbox.txt")
-# line = fhandle.read()
-# print(line[0:10]) # slicing.
+file_name = input("Enter file name: ")
+fh = open(file_name, "w")
+count = 0
+while count < 10:
+    line = input("type> ")
+    fh.write(line)
+    fh.write("\n")
+    count += 1
+fh.close()
 
-
-file_1 = open("demo.txt", "w")
-# file_1 = open("demo.txt", "a")
-file_1.write("How are you")

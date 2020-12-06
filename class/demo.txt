@@ -1,1 +1,3 @@
-How are you
+git add .
+git commit -m "YOUR COMMIT MSG"
+git push -u origin master
