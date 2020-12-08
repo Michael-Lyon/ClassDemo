@@ -11,3 +11,10 @@ class AllJobsPage:
     def jobs(self):
         """returns all the jobs in a page"""
         return [JobParser(e) for e in self.soup.select(ALLJobLocators.JOBS)]
+
+    @property
+    def page_count(self):
+        """RETURNS THE NUMBER OF MAXIMUM PAGES"""
+        content = self.soup.select(ALLJobLocators.PAGINATION)
+        page_num = int(content[-2].string)
+        return page_num
